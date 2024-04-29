@@ -9,10 +9,10 @@ COPY . /code/
 RUN pip install poetry
 
 # RUN poetry config virtualenvs.create false
-
-RUN poetry config virtualenvs.create false \
-    && poetry install --no-interaction --no-root
+RUN poetry config virtualenvs.create false
 
 # RUN poetry install
+RUN poetry install --no-interaction --no-root
+
 
 CMD ["poetry", "run", "uvicorn", "src.main:app", "--host", "0.0.0.0", "--reload"]
