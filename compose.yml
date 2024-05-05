@@ -1,0 +1,13 @@
+name: "lahoreclass"
+
+services:
+  hello-api:
+    image: "lahore-class-img"
+    build:
+      context: ./lahore-hello-code
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./lahore-hello-code:/code
+  
