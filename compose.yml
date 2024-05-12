@@ -10,4 +10,20 @@ services:
       - "8000:8000"
     volumes:
       - ./lahore-hello-code:/code
-  
+    networks:
+      - lahore-network
+
+  order-api:
+    image: "order-img"
+    build:
+      context: ./order
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8000"
+    volumes:
+      - ./order:/code
+    networks:
+      - lahore-network
+
+networks:
+  lahore-network:

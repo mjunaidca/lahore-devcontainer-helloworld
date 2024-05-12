@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "src"
+name = "app"
 version = "0.1.0"
 description = ""
 authors = ["Muhammad Junaid <mr.junaidshaukat@gmail.com>"]
@@ -7,9 +7,8 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
-fastapi = "^0.110.2"
+fastapi = "^0.111.0"
 uvicorn = "^0.29.0"
-requests = "^2.31.0"
 
 
 [build-system]
